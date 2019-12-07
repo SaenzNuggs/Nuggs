@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cstdlib> 
+using namespace std; 
+
+int main() {
+
+
+  int digit, bad; 
+  int used[10];
+  const int min = 123456789;
+  const int max = 987654321;
+
+
+
+  for(int i=min; i<=max; i++){
+    
+    digit = i%9;
+    if (digit==0){
+      digit=i%10%8;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%100%7;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%1000%6;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%10000%5;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%100000%4;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%1000000%3;
+    } else {
+      continue;
+    }
+    if (digit==0){
+      digit=i%10000000%2;
+    } else {
+      continue;
+    }
+    if (digit==0) {
+      cout << i;
+    }
+  
+  } 
+}
